@@ -2,19 +2,15 @@ import pandas as pd
 import numpy as np
 import os
 from nltk.grammar import CFG, FeatureGrammar
-import utils
+import hcmut.iaslab.nlp.app.utility as utility
 
-def print_rules():
-    
-    input_file = utils.get_path("data/grammar_cfg.xlsx")
-    print(input_file)
-    input_file2 = utils.get_path("data/lexicon_cfg.xlsx")
-    output_file = utils.get_path("output/grammar.txt")
-    generate_grammar(input_file,output_file)
-    generate_grammar(input_file2,output_file,append=True)
+def print_rules(grammar_file,lexicon_file,output_file):
+    generate_grammar(grammar_file,output_file)
+    generate_grammar(lexicon_file,output_file,append=True)
     
 def remove_last_space(s):
-    return s[:-1] if s.endswith(' ') else s      
+    return s[:-1] if s.endswith(' ') else s 
+    
 def generate_grammar(input_file,output_file, append = False):
     df = pd.read_excel(input_file)
     df.fillna("")
@@ -29,6 +25,8 @@ def generate_grammar(input_file,output_file, append = False):
     
     # Determine file writing mode
     open_type = 'w' if not append else 'a'
+    # os.chdir('/')
+    print(os.path.exists("../output"))
     
     # Write the grammar rules to the output file
     with open(output_file, open_type) as f:

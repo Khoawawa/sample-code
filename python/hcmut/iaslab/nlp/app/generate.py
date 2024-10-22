@@ -2,13 +2,10 @@ import copy
 import random
 import itertools
 import sys
-from tkinter import Variable
 from nltk.grammar import Nonterminal, FeatureGrammar, FeatStructNonterminal, FeatureValueType
 from nltk.featstruct import unify
 import nltk.parse.generate
-import utils
 
-import grammar_rule
 # from nltk.parse.generate import generate 
 def generate(grammar:FeatureGrammar, start = None, depth = None, n= None):
     if not start:
