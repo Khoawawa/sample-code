@@ -7,6 +7,7 @@ import utils
 def print_rules():
     
     input_file = utils.get_path("data/grammar_cfg.xlsx")
+    print(input_file)
     input_file2 = utils.get_path("data/lexicon_cfg.xlsx")
     output_file = utils.get_path("output/grammar.txt")
     generate_grammar(input_file,output_file)

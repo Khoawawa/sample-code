@@ -10,7 +10,7 @@ def get_root_directory():
     project_directory = os.getcwd()
     return project_directory
 def get_path(path):
-    return get_root_directory() + "/" + path
+    return get_root_directory() + "/python/hcmut/iaslab/nlp/app/" + path
 
 def load_grammar(grammar_file = get_path("output/grammar.txt")):
     with open(grammar_file,'r') as f:
