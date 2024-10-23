@@ -11,7 +11,7 @@ def get_data_path(data_file):
     return "src/hcmut/iaslab/nlp/app/data/" + data_file 
 
 def get_IO(IO_file, type):
-    path = "../" + ('input' if type == "i" else 'output') + '/'
+    path = 'nlp/' + ('input' if type == "i" else 'output') + '/'
     return path + IO_file
 
 def load_grammar(grammar_file):

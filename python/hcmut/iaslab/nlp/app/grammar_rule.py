@@ -25,17 +25,9 @@ def generate_grammar(input_file,output_file, append = False):
     
     # Determine file writing mode
     open_type = 'w' if not append else 'a'
-    # os.chdir('/')
-    print(os.path.exists("../output"))
-    
     # Write the grammar rules to the output file
     with open(output_file, open_type) as f:
         if open_type == 'a':
             f.write("\n")
         f.write("\n".join(grammar_rules))
 
-
-
-if __name__ == '__main__':
-    print_rules()
-    # get_root_directory()
