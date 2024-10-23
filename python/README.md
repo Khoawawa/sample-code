@@ -39,11 +39,11 @@ WH -> 'what' | 'who' | 'why' | 'where' | 'when'
 Use `generate_cfg()` in grammar_rule.py to generate 10000 sentences
 ### An example
 ```
-a cat is under the window
+the big dog eats over the window
 ```
 ## Parsing
 Use `parse()` in parse.py to parse sentences
-### An example for **a cat is under the window** 
+### An example for **the big dog eats over the window** 
 ```
-(S (WH_S (WH who) (AUX do) (NP_NS (N cats))) (VP (V_intrans eat) (PP (P under) (NP_LOC (DET the) (N_LOC window)))))
+(S (NP_S_S3 (NP_S3 (DET_S3 the) (ADJ big) (N_S3 dog))) (VP_S3 (V_S3_intrans eats) (PP (P over) (NP_LOC (DET the) (N_LOC window)))))
 ```
