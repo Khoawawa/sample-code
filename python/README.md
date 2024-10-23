@@ -1,6 +1,6 @@
 # NLP GENERATING AND PARSING WITH GRAMMAR RULES
 ## Github Link
-`https://github.com/Khoawawa/sample-code`
+```https://github.com/Khoawawa/sample-code```
 ## A Simple Grammar
 <!-- Grammar rule -->
 
