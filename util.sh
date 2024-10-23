@@ -41,7 +41,7 @@ function run_submit {
 	# require: zip
 	echo "make submit file $STUDENT_ID.zip"
 	# zip PROJ_P_LANG -o $STUDENT_ID.zip
-	docker run --rm -ti -v `pwd`:/data thanhhungqb/images:zip-2023  zip -r /data/$STUDENT_ID.zip python java util.sh
+	docker run --rm -ti -v `pwd`:/data thanhhungqb/images:zip-2023  zip -r /data/$STUDENT_ID.zip $STUDENT_ID input local_output python util.sh
 	echo "Please check file $STUDENT_ID.zip to make sure all correct directories/files included"
 }
 
